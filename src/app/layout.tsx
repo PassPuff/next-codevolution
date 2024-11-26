@@ -1,33 +1,32 @@
-import {ReactNode} from "react";
+import { ReactNode } from 'react'
 
 export const metadata = {
-  title: "Virmer page",
-  description: 'the best site'
+  title: 'Virmer page',
+  description: 'the best site',
 }
 
-export default function RootLayout({children}: {children: ReactNode}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-
-    <body>
-    <header
-      style={{
-        backgroundColor: 'lightblue',
-        padding: '1rem'
-      }}
-    >
-      <p>Header</p>
-    </header>
-    {children}
-    <footer
-      style={{
-        backgroundColor: 'lightgoldenrodyellow',
-        padding: '1rem'
-      }}>
-      <p>Footer</p>
-    </footer>
-    
-    </body>
+      <body>
+        <header
+          style={{
+            backgroundColor: 'lightblue',
+            padding: '2rem',
+          }}
+        >
+          <p>Header</p>
+        </header>
+        {children}
+        <footer
+          style={{
+            backgroundColor: 'lightgoldenrodyellow',
+            padding: '1rem',
+          }}
+        >
+          <p>Footer</p>
+        </footer>
+      </body>
     </html>
   )
 }

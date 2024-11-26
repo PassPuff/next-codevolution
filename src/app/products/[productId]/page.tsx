@@ -1,16 +1,17 @@
-const ProductDetails = async ({params}: {
+const ProductDetails = async ({
+  params,
+}: {
   params: {
-    productId: string,
+    productId: string
   }
 }) => {
-
-  const {productId} = await params;
+  const { productId } = await params
 
   return (
     <div>
       <h1>Details about product {productId}</h1>
     </div>
-  );
-};
+  )
+}
 
-export default ProductDetails;
+export default ProductDetails

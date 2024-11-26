@@ -8,7 +8,7 @@ const Products = () => {
         <li>Product 3</li>
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export default Products;
+export default Products
