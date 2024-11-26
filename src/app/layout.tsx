@@ -1,11 +1,18 @@
-import { ReactNode } from 'react'
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Virmer page',
+export const metadata: Metadata = {
+  title: {
+    default: 'Default title from RootLayout.tsx',
+    template: '%s | WHAT IS IT',
+  },
   description: 'the best site',
-}
+};
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body>
@@ -28,5 +35,5 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </footer>
       </body>
     </html>
-  )
+  );
 }
