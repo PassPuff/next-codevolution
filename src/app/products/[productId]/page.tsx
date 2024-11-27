@@ -1,14 +1,14 @@
 import { Metadata } from 'next';
 
-type Props = {
-  params: {
-    productId: string;
-  };
-};
+type Props = Promise<{
+  productId: string;
+}>;
 
 export const generateMetadata = async ({
   params,
-}: Props): Promise<Metadata> => {
+}: {
+  params: Props;
+}): Promise<Metadata> => {
   const { productId } = await params; // Извлекаем `productId` синхронно
 
   const title = await new Promise((resolve) =>
@@ -22,7 +22,7 @@ export const generateMetadata = async ({
   };
 };
 
-export default async function ProductDetails({ params }: Props) {
+export default async function ProductDetails({ params }: { params: Props }) {
   const { productId } = await params; // `params` синхронно доступен здесь
   return <h1>Details about product {productId}</h1>;
 }

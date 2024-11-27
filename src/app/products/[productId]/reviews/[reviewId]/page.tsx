@@ -1,17 +1,24 @@
-import { notFound } from 'next/navigation';
+// import { notFound } from 'next/navigation';
 
-export default async function ReviewId({
-  params,
-}: {
-  params: {
-    reviewId: string;
-    productId: string;
-  };
-}) {
+type Props = Promise<{
+  reviewId: string;
+  productId: string;
+}>;
+
+function getRandomInit(count: number) {
+  return Math.floor(Math.random() * count);
+}
+
+export default async function ReviewId({ params }: { params: Props }) {
   const { reviewId } = await params;
   const { productId } = await params;
+  const random = getRandomInit(2);
 
-  if (parseInt(reviewId) >= 1000) notFound();
+  if (random === 1) {
+    throw new Error('что то пошло не так');
+  }
+
+  // if (parseInt(reviewId) >= 1000) notFound();
 
   return (
     <h1>
