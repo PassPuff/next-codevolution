@@ -9,7 +9,7 @@ export const generateMetadata = async ({
 }: {
   params: Props;
 }): Promise<Metadata> => {
-  const { productId } = await params; // Извлекаем `productId` синхронно
+  const { productId } = await params;
 
   const title = await new Promise((resolve) =>
     setTimeout(() => {

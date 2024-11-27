@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import Header from '@/components/Header/Header';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: {
@@ -22,7 +24,7 @@ export default function RootLayout({
             padding: '2rem',
           }}
         >
-          <p>Header</p>
+          <Header />
         </header>
         {children}
         <footer
