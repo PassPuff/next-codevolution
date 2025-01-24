@@ -9,6 +9,7 @@ export default function ErrorBoundary({
   error: Error;
   reset: () => void;
 }) {
+  const isLoginIn = false;
   return (
     <div className="mb-3">
       <h1 className="text-xl mb-6 font-bold"> {error.message}</h1>

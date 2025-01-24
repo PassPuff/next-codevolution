@@ -11,7 +11,7 @@ export default function DashboardLayout({
   revenue: React.ReactNode;
   login: React.ReactNode;
 }) {
-  const isLoginIn = false;
+  const isLoginIn = true;
   return isLoginIn ? (
     <>
       <main className={'mb-3 text-3xl'}>{children}</main>
